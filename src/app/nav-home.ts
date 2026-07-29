@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { NgbdNavVertical } from './nav-vertical'
 import { toSignal } from '@angular/core/rxjs-interop';
 @Component({
@@ -10,5 +10,4 @@ import { toSignal } from '@angular/core/rxjs-interop';
 })
 export class NavHome {
     section = input.required<string>();
-    constructor() { }
 }

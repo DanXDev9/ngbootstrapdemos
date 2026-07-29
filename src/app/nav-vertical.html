@@ -1,5 +1,5 @@
-<nav ngbNav #nav="ngbNav" [(activeId)]="activeTab" class="nav-pills">
-  <ng-container ngbNavItem="left">
+<nav ngbNav #nav="ngbNav" [activeId]="activeTab()" (activeIdChange)="onTabChange($event)" class="nav-pills">
+  <ng-container ngbNavItem="Left">
     <a ngbNavLink>Left</a>
     <ng-template ngbNavContent>
       <p>
@@ -13,7 +13,7 @@
       </p>
     </ng-template>
   </ng-container>
-  <ng-container ngbNavItem="middle">
+  <ng-container ngbNavItem="Middle">
     <a ngbNavLink>Middle</a>
     <ng-template ngbNavContent>
       <p>
@@ -29,7 +29,7 @@
       </p>
     </ng-template>
   </ng-container>
-  <ng-container ngbNavItem="right">
+  <ng-container ngbNavItem="Right">
     <a ngbNavLink>Right</a>
     <ng-template ngbNavContent>
       <p>
