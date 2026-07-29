@@ -1,6 +1,6 @@
-<nav ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-pills">
-  <ng-container ngbNavItem="top">
-    <a ngbNavLink>Top</a>
+<nav ngbNav #nav="ngbNav" [(activeId)]="activeTab" class="nav-pills">
+  <ng-container ngbNavItem="left">
+    <a ngbNavLink>Left</a>
     <ng-template ngbNavContent>
       <p>
         Raw denim you probably haven't heard of them jean shorts Austin.
@@ -29,8 +29,8 @@
       </p>
     </ng-template>
   </ng-container>
-  <ng-container ngbNavItem="bottom">
-    <a ngbNavLink>Bottom</a>
+  <ng-container ngbNavItem="right">
+    <a ngbNavLink>Right</a>
     <ng-template ngbNavContent>
       <p>
         Sed commodo, leo at suscipit dictum, quam est porttitor sapien, eget
@@ -51,4 +51,4 @@
 
 <div [ngbNavOutlet]="nav" class="mt-2"></div>
 
-<pre>Active: {{ active() }}</pre>
+<pre>Active: {{ activeTab() }}</pre>

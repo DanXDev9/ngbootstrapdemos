@@ -1,10 +1,13 @@
 import {provideHttpClient} from '@angular/common/http';
 import {bootstrapApplication} from '@angular/platform-browser';
 import {provideBrowserGlobalErrorListeners} from '@angular/core';
-import {NgbdNavVertical} from './app/nav-vertical';
+import {AppComponent} from './app/app.component';
+import { provideRouter, withComponentInputBinding } from '@angular/router';
+import { appRoutes } from './app/app.routes';
 
-bootstrapApplication(NgbdNavVertical, {
+bootstrapApplication(AppComponent, {
   providers: [
+    provideRouter(appRoutes, withComponentInputBinding()),
     provideBrowserGlobalErrorListeners(),
     provideHttpClient(),
   ],

@@ -1,4 +1,5 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, input } from '@angular/core';
+import { Router } from '@angular/router';
 import {
   NgbNavContent,
   NgbNav,
@@ -16,5 +17,13 @@ import {
   templateUrl: './nav-vertical.html',
 })
 export class NgbdNavVertical {
-  readonly active = signal('top');
-}
+  private router = inject(Router);
+
+  // Receives the initialized or updated path from the parent
+  activeTab = input.required<string>();
+
+  // Triggered when the user clicks a tab inside this child component
+  onTabChange(targetTab: string): void {
+    // Navigate to update the URL parameter, which cycles back down into activeTab
+    this.router.navigate(['/nav-home', targetTab]);
+  }
