@@ -16,6 +16,7 @@ import {
   ],
   templateUrl: './nav-vertical.html',
 })
+
 export class NgbdNavVertical {
   private router = inject(Router);
 
@@ -27,3 +28,4 @@ export class NgbdNavVertical {
     // Navigate to update the URL parameter, which cycles back down into activeTab
     this.router.navigate(['/nav-home', targetTab]);
   }
+}
