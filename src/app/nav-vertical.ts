@@ -6,13 +6,21 @@ import {
   NgbNavItem,
 	NgbNavLink,
   NgbNavLinkBase,
-  NgbNavOutlet,
+  NgbNavOutlet 
 } from '@ng-bootstrap/ng-bootstrap/nav';
+
+import { 
+  NgbDropdown, 
+  NgbDropdownToggle, 
+  NgbDropdownMenu, 
+  NgbDropdownItem 
+} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'ngbd-nav-vertical',
   imports: [
-    NgbNavContent, NgbNav, NgbNavItem, NgbNavLink, NgbNavLinkBase, NgbNavOutlet
+    NgbNavContent, NgbNav, NgbNavItem, NgbNavLink, NgbNavLinkBase, NgbNavOutlet, 
+    NgbDropdown, NgbDropdownToggle, NgbDropdownMenu, NgbDropdownItem 
   ],
   templateUrl: './nav-vertical.html',
 })
