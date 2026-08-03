@@ -64,18 +64,18 @@
     </a>
     
     <div ngbDropdownMenu>
-      <button 
+      <a 
         ngbDropdownItem 
         [class.active]="activeTab() === 'ProductList'"
         (click)="onTabChange('ProductList')">
         Product List
-      </button>
-      <button 
+    </a>
+      <a 
         ngbDropdownItem 
         [class.active]="activeTab() === 'ProductSearch'"
         (click)="onTabChange('ProductSearch')">
         Product Search
-      </button>
+  </a>
     </div>
   </div>
 
