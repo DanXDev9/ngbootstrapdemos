@@ -1,5 +1,5 @@
 <nav ngbNav #nav="ngbNav" 
-     [activeId]="['Left', 'Middle', 'Right', 'ProductList', 'ProductSearch'].includes(activeTab()) ? activeTab() : 'NONE'" 
+     [activeId]="activeTab()" 
      (activeIdChange)="onTabChange($event)" 
      class="nav-pills">
   
@@ -57,7 +57,7 @@
     <a 
       ngbDropdownToggle
       class="nav-link" 
-      [class.active]="['ProductList', 'ProductSearch'].includes(activeTab())"
+      [class.active]="['ProductList', 'ProductSearch', 'ProductDetails'].includes(activeTab())"
       role="button"
       style="cursor: pointer;">
       Products
@@ -70,14 +70,20 @@
         (click)="onTabChange('ProductList')">
         Product List
     </a>
-      <a 
+    <a 
         ngbDropdownItem 
         [class.active]="activeTab() === 'ProductSearch'"
         (click)="onTabChange('ProductSearch')">
         Product Search
-  </a>
-    </div>
+    </a>
+    <a 
+      ngbDropdownItem 
+      [class.active]="activeTab() === 'ProductDetails'"
+      (click)="onTabChange('ProductDetails')">
+      Product Details
+    </a>
   </div>
+</div>
 
   <!-- Dropdown item sub-nav containers -->
   <ng-container ngbNavItem="ProductList">
